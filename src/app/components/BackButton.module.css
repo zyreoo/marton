@@ -1,0 +1,31 @@
+.backButton {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  color: #FFD700;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.backButton:hover {
+  transform: translateX(-5px);
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 768px) {
+  .backButton {
+    top: 20px;
+    left: 20px;
+  }
+  
+  .arrow {
+    width: 28px;
+    height: 28px;
+  }
+} 
