@@ -1,0 +1,139 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  margin: 0;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #FFD700;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: var(--font-dyna-puff);
+  font-weight: 600;
+}
+
+.content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.text {
+  color: #FFE77A;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-family: var(--font-lato);
+  text-align: justify;
+}
+
+.section {
+  margin: 3rem 0;
+}
+
+.subtitle {
+  color: #FFD700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-dyna-puff);
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skillCard {
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid #FFD700;
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: #FFD700;
+  text-align: center;
+  font-family: var(--font-lato);
+  font-size: 1.1rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 215, 0, 0.15);
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 50px 25px;
+  }
+
+  .content {
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+  }
+
+  .text {
+    font-size: 1.15rem;
+  }
+
+  .subtitle {
+    font-size: 1.9rem;
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* Mobile styles - enhance existing media query */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+
+  .text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .section {
+    margin: 2rem 0;
+  }
+
+  .skillCard {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+} 

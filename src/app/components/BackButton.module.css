@@ -1,6 +1,6 @@
 .backButton {
   position: absolute;
-  top: 30px;
+  top: 60px;
   left: 30px;
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@
 
 @media (max-width: 768px) {
   .backButton {
-    top: 20px;
+    top: 40px;
     left: 20px;
   }
   
