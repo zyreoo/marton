@@ -1,13 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useSwipeable } from 'react-swipeable';
 import styles from './AdventureBook.module.css';
 
 export default function AdventureBook() {
   const [currentPage, setCurrentPage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const [swipeDirection, setSwipeDirection] = useState(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -19,29 +17,6 @@ export default function AdventureBook() {
     
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-
-  const handlers = useSwipeable({
-    onSwipedLeft: () => {
-      if (currentPage < book.chapters.length - 1) {
-        setSwipeDirection('left');
-        setTimeout(() => {
-          setCurrentPage(prev => prev + 1);
-          setSwipeDirection(null);
-        }, 800);
-      }
-    },
-    onSwipedRight: () => {
-      if (currentPage > 0) {
-        setSwipeDirection('right');
-        setTimeout(() => {
-          setCurrentPage(prev => prev - 1);
-          setSwipeDirection(null);
-        }, 800);
-      }
-    },
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: false
-  });
 
   const book = {
     title: "My Journey",
@@ -134,10 +109,7 @@ export default function AdventureBook() {
 
   return (
     <>
-      <div 
-        className={`${styles.book} ${swipeDirection ? styles[`swipe-${swipeDirection}`] : ''}`}
-        {...handlers}
-      >
+      <div className={styles.book}>
         {currentContent.type === 'title' ? (
           <div className={styles.titlePage}>
             <h1 className={styles.bookTitle}>{book.title}</h1>
@@ -179,25 +151,23 @@ export default function AdventureBook() {
 
       </div>
 
-      {!isMobile && (
-        <div className={styles.navigation}>
-          <button 
-            onClick={prevPage} 
-            className={`${styles.navButton} ${currentPage === 0 ? styles.disabled : ''}`}
-            disabled={currentPage === 0}
-          >
-            ← Previous
-          </button>
-          <span className={styles.pageNumber}>{currentPage + 1}/{book.chapters.length}</span>
-          <button 
-            onClick={nextPage} 
-            className={`${styles.navButton} ${currentPage === book.chapters.length - 1 ? styles.disabled : ''}`}
-            disabled={currentPage === book.chapters.length - 1}
-          >
-            Next →
-          </button>
-        </div>
-      )}
+      <div className={styles.navigation}>
+        <button 
+          onClick={prevPage} 
+          className={`${styles.navButton} ${currentPage === 0 ? styles.disabled : ''}`}
+          disabled={currentPage === 0}
+        >
+          ←
+        </button>
+        <span className={styles.pageNumber}>{currentPage + 1}/{book.chapters.length}</span>
+        <button 
+          onClick={nextPage} 
+          className={`${styles.navButton} ${currentPage === book.chapters.length - 1 ? styles.disabled : ''}`}
+          disabled={currentPage === book.chapters.length - 1}
+        >
+          →
+        </button>
+      </div>
     </>
   );
 } 

@@ -1,5 +1,5 @@
 .backButton {
-  position: absolute;
+  position: fixed;
   top: 60px;
   left: 30px;
   display: flex;
@@ -7,6 +7,9 @@
   color: #FFD700;
   text-decoration: none;
   transition: transform 0.3s ease;
+  z-index: 100;
+  cursor: pointer;
+  padding: 10px;
 }
 
 .backButton:hover {
@@ -20,7 +23,7 @@
 
 @media (max-width: 768px) {
   .backButton {
-    top: 40px;
+    top: 20px;
     left: 20px;
   }
   
