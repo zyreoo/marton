@@ -17,7 +17,7 @@
   color: #FFD700;
   margin: 0 0 16px 0;
   font-size: 1.6rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-league-spartan);
 }
 
 .description {
@@ -25,7 +25,7 @@
   margin: 0 0 20px 0;
   font-size: 1.1rem;
   line-height: 1.6;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-league-spartan);
 }
 
 .topics {
@@ -56,7 +56,8 @@
   border-radius: 8px;
   width: fit-content;
   transition: background 0.2s;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-league-spartan);
+  font-weight: 500;
 }
 
 .link:hover {
@@ -66,6 +67,11 @@
 .icon {
   width: 18px;
   height: 18px;
+}
+
+.tech {
+  font-family: var(--font-league-spartan);
+  font-style: italic; /* Adding style variation */
 }
 
 @media (max-width: 768px) {

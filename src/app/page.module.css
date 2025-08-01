@@ -10,12 +10,22 @@
 }
 
 .name {
-  font-family: var(--font-dyna-puff);
+  font-family: var(--font-league-spartan);
   font-size: 5.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
   color: #ffd700;
   text-align: center;
+}
+
+.subtitle {
+  font-family: var(--font-garamond);
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #FFE77A;
+  font-style: italic;
 }
 
 .nav {
@@ -25,7 +35,7 @@
 }
 
 .link {
-  font-family: var(--font-lato);
+  font-family: var(--font-league-spartan);
   color: #ffd700;
   text-decoration: none;
   font-size: 1.5rem;

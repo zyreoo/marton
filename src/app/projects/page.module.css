@@ -14,7 +14,7 @@
   font-size: 3rem;
   margin-bottom: 50px;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-league-spartan);
   font-weight: 600;
 }
 

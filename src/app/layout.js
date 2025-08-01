@@ -1,24 +1,11 @@
-import { Bebas_Neue, DynaPuff, Lato } from 'next/font/google';
+import { League_Spartan } from 'next/font/google';
 import './globals.css';
 
-const bebasNeue = Bebas_Neue({
-  weight: '400',
+const leagueSpartan = League_Spartan({
   subsets: ['latin'],
   display: 'swap',
-});
-
-const dynaPuff = DynaPuff({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-dyna-puff',
-});
-
-const lato = Lato({
-  weight: ['100', '300', '400', '700', '900'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-lato',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-league-spartan',
 });
 
 export const metadata = {
@@ -28,11 +15,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${dynaPuff.variable} ${lato.variable}`}>
+    <html lang="en" className={leagueSpartan.variable}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
-      <body className={bebasNeue.className}>{children}</body>
+      <body className={leagueSpartan.className}>{children}</body>
     </html>
   );
 }

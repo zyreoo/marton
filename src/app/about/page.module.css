@@ -14,7 +14,7 @@
   font-size: 3rem;
   margin-bottom: 50px;
   text-align: center;
-  font-family: var(--font-dyna-puff);
+  font-family: var(--font-league-spartan);
   font-weight: 600;
 }
 
@@ -29,7 +29,7 @@
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 2rem;
-  font-family: var(--font-lato);
+  font-family: var(--font-league-spartan);
   text-align: justify;
 }
 
@@ -41,7 +41,7 @@
   color: #FFD700;
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  font-family: var(--font-dyna-puff);
+  font-family: var(--font-league-spartan);
 }
 
 .skillsGrid {
@@ -52,13 +52,11 @@
 }
 
 .skillCard {
-  background: rgba(255, 215, 0, 0.1);
-  border: 1px solid #FFD700;
   padding: 1.5rem;
   border-radius: 10px;
   color: #FFD700;
   text-align: center;
-  font-family: var(--font-lato);
+  font-family: var(--font-league-spartan);
   font-size: 1.1rem;
   transition: transform 0.2s, background-color 0.2s;
 }
